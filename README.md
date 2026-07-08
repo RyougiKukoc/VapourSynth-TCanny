@@ -52,3 +52,21 @@ meson build
 ninja -C build
 ninja -C build install
 ```
+
+## pip install from this fork
+This fork can install the upstream Windows x86_64 release DLL into VapourSynth's
+autoload plugin directory:
+
+```powershell
+pip install "vapoursynth-tcanny @ git+https://github.com/RyougiKukoc/VapourSynth-TCanny.git"
+```
+
+The wheel build downloads and verifies the upstream `TCanny-r14-win64.7z`
+release asset, then installs:
+
+```text
+vapoursynth/plugins/tcanny/
+  manifest.vs
+  tcanny.dll
+  LICENSE
+```
