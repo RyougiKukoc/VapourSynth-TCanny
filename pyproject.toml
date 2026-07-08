@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.30", "packaging>=24.0", "py7zr>=0.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vapoursynth-tcanny"
+version = "14"
+description = "TCanny edge detection plugin for VapourSynth"
+readme = "README.md"
+license = { file = "LICENSE" }
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "TCanny contributors" }]
+dependencies = ["VapourSynth>=77"]
+
+[project.urls]
+"Source Code" = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny"
+"Packaging Fork" = "https://github.com/RyougiKukoc/VapourSynth-TCanny"
+"Upstream Releases" = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "LICENSE",
+  "README.md",
+  "TCanny",
+  "hatch_build.py",
+  "meson.build",
+  "pyproject.toml",
+]
+
+[tool.hatch.build.targets.wheel]
+include = ["vapoursynth/plugins"]
+artifacts = [
+  "vapoursynth/plugins/**/*.dll",
+  "vapoursynth/plugins/**/manifest.vs",
+  "vapoursynth/plugins/**/LICENSE",
+]
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hatch_build.py"
