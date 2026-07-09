@@ -15,7 +15,7 @@ dependencies = ["VapourSynth>=77"]
 
 [project.urls]
 "Source Code" = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny"
-"Packaging Fork" = "https://github.com/RyougiKukoc/VapourSynth-TCanny"
+"Packaging Fork" = "https://github.com/RyougiKukoc/VapourSynth-TCanny-vcs"
 "Upstream Releases" = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny/releases"
 
 [tool.hatch.build.targets.sdist]
