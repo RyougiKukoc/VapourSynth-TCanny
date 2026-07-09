@@ -58,7 +58,7 @@ This fork can install the upstream Windows x86_64 release DLL into VapourSynth's
 autoload plugin directory:
 
 ```powershell
-pip install "vapoursynth-tcanny @ git+https://github.com/RyougiKukoc/VapourSynth-TCanny.git"
+pip install "vapoursynth-tcanny @ git+https://github.com/RyougiKukoc/VapourSynth-TCanny-vcs.git"
 ```
 
 The wheel build downloads and verifies the upstream `TCanny-r14-win64.7z`
